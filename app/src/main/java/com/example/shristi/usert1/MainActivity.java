@@ -92,8 +92,8 @@ public class MainActivity extends ListActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
                 public void onItemClick (AdapterView < ? > parent, View view,int position, long id){
-                TextView cuisineView = (TextView) view.findViewById(R.id.UsersCuisine );
-                image.link1 = cuisineView.getText().toString();
+               /* TextView cuisineView = (TextView) view.findViewById(R.id.UsersCuisine );
+                image.link1 = cuisineView.getText().toString();*/
                 Intent i = new Intent(getApplicationContext(), image.class);
                         startActivity(i);
                 }
