@@ -4,6 +4,6 @@
     <string name="sample_cuisine">sample cuisine</string>
     <string name="sample_locations">2 locations</string>
     <string name="loading_empty">Loading…</string>
-    <string name="loading_users">Loading restaurants listing…</string>
+    <string name="loading_users">Loading listing…</string>
     <string name="action_settings">Settings</string>
 </resources>
