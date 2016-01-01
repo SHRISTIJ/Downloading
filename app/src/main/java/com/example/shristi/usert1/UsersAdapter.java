@@ -62,7 +62,7 @@ public class UsersAdapter extends ArrayAdapter<Users> {
 
         }catch(Exception e)
         {
-
+            System.out.println("Check the link and internet connection");
         }
         System.out.println(o1.rev(input));
         g=o1.rev(input);

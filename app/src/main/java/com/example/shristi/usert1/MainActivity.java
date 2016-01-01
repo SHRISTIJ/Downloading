@@ -8,18 +8,18 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+//import android.widget.Toast;
 
 import com.backendless.Backendless;
 import com.backendless.BackendlessCollection;
-import com.backendless.UserService;
+//import com.backendless.UserService;
 import com.backendless.persistence.BackendlessDataQuery;
 import com.backendless.persistence.QueryOptions;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.widget.AdapterView.*;
+//import static android.widget.AdapterView.*;
 
 public class MainActivity extends ListActivity {
 
