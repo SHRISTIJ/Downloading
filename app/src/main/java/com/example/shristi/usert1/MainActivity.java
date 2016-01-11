@@ -95,7 +95,7 @@ public class MainActivity extends ListActivity {
                 TextView cuisineView = (TextView) view.findViewById(R.id.UsersCuisine );
                 TextView DescriptionView = (TextView) view.findViewById( R.id.UsersLocations );
 
-                image.link1 = cuisineView.getText().toString();
+              image.link = cuisineView.getText().toString();
                 image.disc= DescriptionView.getText().toString();
                 Intent i = new Intent(getApplicationContext(), image.class);
                         startActivity(i);

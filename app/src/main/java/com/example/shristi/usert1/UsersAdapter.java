@@ -50,42 +50,6 @@ public class UsersAdapter extends ArrayAdapter<Users> {
         //String locationsNumberTextTemplate = getContext().getResources().getQuantityString( R.plurals.Users_locations, item.getLocations().size() );
         // locationsNumberView.setText( String.format(locationsNumberTextTemplate, item.getLocations().size()) );
         link =item.getLink();
-        String g;
-
-       // Scanner sc1=new Scanner(System.in);
-        ss o1 =new ss();
-        String input="";
-        int i=0,p=0;
-      //  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        //System.out.println("Enter the string");
-        try{input = link;
-
-        }catch(Exception e)
-        {
-            System.out.println("Check the link and internet connection");
-        }
-        System.out.println(o1.rev(input));
-        g=o1.rev(input);
-        String s1="";
-        //System.out.println(g);
-        while(g.charAt(i)!='/')
-        {	if(g.charAt(i)=='g')
-        {p=1;}
-
-            if(p==1)
-            {	if(g.charAt(i)==' ')
-            {s1=s1+"02%";
-                i=i+2;
-            }
-
-            else
-            {s1=s1+g.charAt(i);}
-            }
-            i++;
-        }
-
-      //  System.out.println(o1.rev(s1));
-link=o1.rev(s1);
         cuisineView.setText( link );
         return view;
     }

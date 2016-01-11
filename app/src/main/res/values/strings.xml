@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">UserT1</string>
-
     <string name="sample_cuisine">sample cuisine</string>
     <string name="sample_locations">2 locations</string>
     <string name="loading_empty">Loading…</string>
