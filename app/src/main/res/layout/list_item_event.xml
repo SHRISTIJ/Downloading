@@ -5,32 +5,32 @@
     >
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sample_restaurant_name"
-        android:id="@+id/UsersName"
+        android:text="Event_name"
+        android:id="@+id/EventName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:textSize="@dimen/abc_text_size_medium_material"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="32dp" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sample_cuisine"
         android:id="@+id/UsersCuisine"
-        android:layout_below="@+id/UsersName"
+        android:layout_below="@+id/EventName"
         android:textSize="@dimen/abc_text_size_small_material"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        />
+        android:layout_alignParentBottom="true" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sample_locations"
         android:layout_alignParentBottom="true"
         android:textSize="@dimen/abc_text_size_small_material"
-        android:id="@+id/UsersLocations" />
+        android:id="@+id/UsersLocations"
+        android:visibility="invisible" />
 
 </RelativeLayout>
