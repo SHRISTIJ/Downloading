@@ -41,6 +41,7 @@
         android:id="@+id/progressBar"
         android:layout_below="@+id/image1"
         android:layout_centerHorizontal="true"
-        android:indeterminate="false" />
+        android:indeterminate="false"
+        android:focusableInTouchMode="false" />
 
 </RelativeLayout>

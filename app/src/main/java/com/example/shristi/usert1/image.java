@@ -43,18 +43,26 @@ public class image extends AppCompatActivity {
        TextView msg=(TextView)findViewById(R.id.msg);
         msg.setText(disc);
         imageView = (ImageView) findViewById(R.id.image1);
+       /* ProgressBar progBar = (ProgressBar) context.getActivity().findViewById(R.id.progress_bar);
+        if (progBar != null) {
+            progBar.setVisibility(View.VISIBLE);
+            progBar.setIndeterminate(true);
+            progBar.getIndeterminateDrawable().setColorFilter(0xFFFFFFFF, android.graphics.PorterDuff.Mode.MULTIPLY);
+        }*/
 //        GetXMLTask task = new GetXMLTask();
-  //     task.execute(new String[]{URL});
-        Context context=getApplicationContext();
-       // super(context.getApplicationContext());
-        final ProgressBar progressBar=(ProgressBar)findViewById(R.id.progressBar);
+        //     task.execute(new String[]{URL});
+        Context context = getApplicationContext();
+        // super(context.getApplicationContext());
+        final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
         Glide.with(context)
                 .load(URL)
                 .into(new GlideDrawableImageViewTarget(imageView) {
                     @Override
                     public void onResourceReady(GlideDrawable drawable, GlideAnimation anim) {
                         super.onResourceReady(drawable, anim);
+                        progressBar.getIndeterminateDrawable().setColorFilter(0xFF82CF7E, android.graphics.PorterDuff.Mode.MULTIPLY);
                         progressBar.setVisibility(View.GONE);
+
                     }
                 });
 
