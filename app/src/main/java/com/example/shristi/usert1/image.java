@@ -14,12 +14,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.backendless.Backendless;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 
 public class image extends AppCompatActivity {
     public static String link;
@@ -42,11 +47,17 @@ public class image extends AppCompatActivity {
   //     task.execute(new String[]{URL});
         Context context=getApplicationContext();
        // super(context.getApplicationContext());
+        final ProgressBar progressBar=(ProgressBar)findViewById(R.id.progressBar);
         Glide.with(context)
                 .load(URL)
-                .into(imageView);
-        Toast.makeText(getApplicationContext(),"Loading Image!", Toast.LENGTH_LONG).show();
-        Toast.makeText(getApplicationContext(),"Loading Image!", Toast.LENGTH_LONG).show();
+                .into(new GlideDrawableImageViewTarget(imageView) {
+                    @Override
+                    public void onResourceReady(GlideDrawable drawable, GlideAnimation anim) {
+                        super.onResourceReady(drawable, anim);
+                        progressBar.setVisibility(View.GONE);
+                    }
+                });
+
     }
 
     @Override
