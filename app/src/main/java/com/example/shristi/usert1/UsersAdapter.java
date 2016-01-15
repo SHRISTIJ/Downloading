@@ -39,8 +39,8 @@ public class UsersAdapter extends ArrayAdapter<Users> {
         View view = convertView == null ? mInflater.inflate( mResource, parent, false ) : convertView;
 
         TextView UsersNameView = (TextView) view.findViewById( R.id.EventName);
-       TextView cuisineView = (TextView) view.findViewById( R.id.UsersCuisine );
-        TextView DescriptionView = (TextView) view.findViewById( R.id.UsersLocations );
+       TextView cuisineView = (TextView) view.findViewById( R.id.Image_Link );
+        TextView DescriptionView = (TextView) view.findViewById( R.id.EventDescription );
 
         Users item = getItem( position );
 

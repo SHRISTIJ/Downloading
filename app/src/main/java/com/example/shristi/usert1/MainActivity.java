@@ -8,19 +8,12 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-//import android.widget.Toast;
-
 import com.backendless.Backendless;
 import com.backendless.BackendlessCollection;
-//import com.backendless.UserService;
 import com.backendless.persistence.BackendlessDataQuery;
 import com.backendless.persistence.QueryOptions;
-
 import java.util.ArrayList;
 import java.util.List;
-
-//import static android.widget.AdapterView.*;
-
 public class MainActivity extends ListActivity {
 
     private BackendlessCollection<Users> users;
@@ -40,11 +33,9 @@ public class MainActivity extends ListActivity {
         setListAdapter( adapter );
 
         QueryOptions queryOptions = new QueryOptions();
-     //   queryOptions.setRelated( Arrays.asList("locations") );
-
         BackendlessDataQuery query = new BackendlessDataQuery( queryOptions );
 
-        Backendless.Data.of( Users.class ).find(query, new LoadingCallback<BackendlessCollection<Users>>(this, getString(R.string.loading_users), true) {
+        Backendless.Data.of( Users.class ).find(query, new LoadingCallback<BackendlessCollection<Users>>(this, getString(R.string.loading_events), true) {
             @Override
             public void handleResponse(BackendlessCollection<Users> usersBackendlessCollection) {
                 users = usersBackendlessCollection;
@@ -92,8 +83,8 @@ public class MainActivity extends ListActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
                 public void onItemClick (AdapterView < ? > parent, View view,int position, long id){
-                TextView cuisineView = (TextView) view.findViewById(R.id.UsersCuisine );
-                TextView DescriptionView = (TextView) view.findViewById( R.id.UsersLocations );
+                TextView cuisineView = (TextView) view.findViewById(R.id.Image_Link );
+                TextView DescriptionView = (TextView) view.findViewById( R.id.EventDescription );
 
               image.link = cuisineView.getText().toString();
                 image.disc= DescriptionView.getText().toString();

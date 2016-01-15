@@ -17,20 +17,21 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sample_cuisine"
-        android:id="@+id/UsersCuisine"
+        android:text="Link_Of_image"
+        android:id="@+id/Image_Link"
         android:layout_below="@+id/EventName"
         android:textSize="@dimen/abc_text_size_small_material"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sample_locations"
+        android:text="Event_Description"
         android:layout_alignParentBottom="true"
         android:textSize="@dimen/abc_text_size_small_material"
-        android:id="@+id/UsersLocations"
+        android:id="@+id/EventDescription"
         android:visibility="invisible" />
 
 </RelativeLayout>
